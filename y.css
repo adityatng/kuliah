@@ -1,0 +1,262 @@
+*:before,
+*:after {
+  position: absolute;
+  content: "";
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(40, 122, 195);
+  background: radial-gradient(circle, rgba(40, 122, 195, 1) 0%, rgba(26, 38, 86, 1) 25%, rgba(1, 5, 14, 1) 100%);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* Space */
+space {
+  position: absolute;
+  height: 1500px;
+  width: 1500px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: spin 180s infinite linear;
+}
+/* Star */
+star {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  top: 200px;
+  left: 200px;
+  border-radius: 100%;
+  background: #ffffff;
+}
+.animateStar {
+  animation: blink-sstar 1s linier;
+}
+/* earth */
+earth {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #14a2f4;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* face */
+face {
+  position: absolute;
+  height: 128px;
+  width: 128px;
+  top: 36px;
+  left: 36px;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+/* eye */
+eye {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin: auto;
+  background: #000000;
+  border-radius: 8px;
+  animation: blink 5s infinite;
+}
+
+#right {
+  top: 0;
+  right: 0;
+  bottom: 40%;
+  left: 60%;
+}
+#left {
+  top: 0;
+  right: 60%;
+  bottom: 40%;
+  left: 0;
+}
+mouth {
+  position: absolute;
+  height: 5px;
+  width: 40px;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000000;
+  transition: 0.5s;
+}
+earth:hover eye {
+  height: 10px;
+  border-radius: 8px;
+  animation: blinkHover 5s infinite;
+}
+earth:hover mouth {
+  transition: 0.5s;
+  transform: translateY(-300%);
+}
+surface {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+mapland {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: -225%;
+  height: 200px;
+  width: 550px;
+  animation: rotation 18s infinite linear;
+}
+
+land1 {
+  position: absolute;
+  height: 25px;
+  width: 85px;
+  border-radius: 15px;
+  background: #00c48b;
+}
+land1:after {
+  height: 25px;
+  width: 65px;
+  top: 19px;
+  left: 50px;
+  border-radius: 15px;
+  background: #00c48b;
+}
+land2 {
+  position: absolute;
+  height: 25px;
+  width: 70px;
+  border-radius: 15px;
+  background: #00c48b;
+}
+land2:after {
+  height: 25px;
+  width: 85px;
+  top: 19px;
+  left: 50px;
+  border-radius: 15px;
+  background: #00c48b;
+}
+land2::before {
+  height: 25px;
+  width: 32px;
+  top: 15px;
+  left: 90px;
+  border-radius: 15px;
+  background: #00c48b;
+}
+land3 {
+  position: absolute;
+  height: 25px;
+  width: 85px;
+  border-radius: 15px;
+  background: #00c48b;
+}
+land3:after {
+  height: 40px;
+  width: 112px;
+  top: 19px;
+  left: 30px;
+  border-radius: 25px;
+  border-bottom-right-radius: 10px;
+  background: #00c48b;
+}
+land3:before {
+  height: 50px;
+  width: 90px;
+  top: 45px;
+  left: 52px;
+  border-radius: 25px;
+  border-bottom-right-radius: 10px;
+  background: #00c48b;
+}
+
+cloud {
+  position: absolute;
+  right: -50%;
+  border-radius: 15px;
+  background: #ffffff;
+  animation: cloud-move infinite linear;
+}
+
+@keyframes cloud-move {
+  100% {
+    right: 200%;
+  }
+}
+@keyframes bink {
+  0% {
+    height: 20px;
+  }
+  94% {
+    height: 20px;
+  }
+  95% {
+    height: 1px;
+  }
+  97% {
+    height: 20px;
+  }
+  98% {
+    height: 1px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+
+@keyframes blinkHover {
+  0% {
+    height: 10px;
+  }
+  94% {
+    height: 10px;
+  }
+  95% {
+    height: 1px;
+  }
+  97% {
+    height: 10px;
+  }
+  98% {
+    height: 1px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  100% {
+    right: 100%;
+  }
+}
+@keyframes blink-sta {
+  100% {
+    box-shadow: 0 0 10px 2px #ffffff;
+  }
+}

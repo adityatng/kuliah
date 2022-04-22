@@ -1,18 +1,19 @@
-*:before, *:after {
+*:before,
+*:after {
   position: absolute;
   content: "";
 }
-
-html, body {
+html,
+body {
   margin: 0;
-  height: 100%;
-  width: 100%;
-  background: #287ac3;
-  background: radial-gradient(circle, #287ac3 0%, #1a2656 25%, #01050e 100%);
+  height: 100vw;
+  width: 100vw;
+  background: rgb(40, 122, 195);
+  background: radial-gradient(circle, rgba(40, 122, 195, 1) 0%, rgba(26, 38, 86, 1) 25%, rgba(1, 5, 14, 1) 100%);
   overflow-y: hidden;
   overflow: hidden;
 }
-
+/* Space */
 space {
   position: absolute;
   height: 1500px;
@@ -24,7 +25,7 @@ space {
   left: 0;
   animation: spin 180s infinite linear;
 }
-
+/* Star */
 star {
   position: absolute;
   height: 2px;
@@ -34,11 +35,10 @@ star {
   border-radius: 100%;
   background: #ffffff;
 }
-
 .animateStar {
   animation: blink-star 1s linear;
 }
-
+/* earth */
 earth {
   position: absolute;
   height: 200px;
@@ -46,14 +46,12 @@ earth {
   margin: auto;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
   background: #14a2f4;
-  border-radius: 100%;
   overflow-y: hidden;
   overflow: hidden;
 }
-
+/* face */
 face {
   position: absolute;
   height: 128px;
@@ -63,7 +61,7 @@ face {
   border-radius: 100%;
   transition: all 0.5s;
 }
-
+/* eye */
 eye {
   position: absolute;
   height: 20px;
@@ -80,14 +78,12 @@ eye {
   bottom: 40%;
   left: 60%;
 }
-
 #left {
   top: 0;
   right: 60%;
   bottom: 40%;
   left: 0;
 }
-
 mouth {
   position: absolute;
   height: 5px;
@@ -100,7 +96,6 @@ mouth {
   background: #000000;
   transition: 0.5s;
 }
-
 earth:hover eye {
   height: 10px;
   border-radius: 8px;
@@ -110,7 +105,6 @@ earth:hover mouth {
   transition: 0.5s;
   transform: translateY(-300%);
 }
-
 surface {
   position: absolute;
   height: 200px;
@@ -121,7 +115,6 @@ surface {
   bottom: 0;
   left: 0;
 }
-
 mapland {
   position: absolute;
   margin: auto;
@@ -148,7 +141,6 @@ land1:after {
   border-radius: 15px;
   background: #00c48b;
 }
-
 land2 {
   position: absolute;
   height: 25px;
@@ -172,7 +164,6 @@ land2:before {
   border-radius: 15px;
   background: #00c48b;
 }
-
 land3 {
   position: absolute;
   height: 25px;
@@ -186,7 +177,7 @@ land3:after {
   top: 19px;
   left: 30px;
   border-radius: 25px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
   background: #00c48b;
 }
 land3:before {
@@ -195,7 +186,7 @@ land3:before {
   top: 45px;
   left: 52px;
   border-radius: 25px;
-  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   background: #00c48b;
 }
 
@@ -232,6 +223,7 @@ cloud {
     height: 20px;
   }
 }
+
 @keyframes blinkHover {
   10% {
     height: 10px;
@@ -252,6 +244,7 @@ cloud {
     height: 10px;
   }
 }
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
@@ -264,6 +257,6 @@ cloud {
 }
 @keyframes blink-sta {
   100% {
-    box-shadow: 0 0 10px 2px #fff;
+    box-shadow: 0 0 10px 2px #ffffff;
   }
 }
